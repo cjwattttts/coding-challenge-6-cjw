@@ -31,3 +31,21 @@ const calculateBonus = (salary, perfomanceRating) => {
 
 console.log(calculateBonus(5000, "Excellent"));
 console.log(calculateBonus(7000, "Good"));
+
+//TASK 4 - Subscprition Pricing
+function calculateSubscpritionCost(plan, months, discount = 0) { // defines the function
+let pricePerMonth; // declares price per month variable
+if (plan === "Basic") {
+    pricePerMonth = 10; // sets price for basic plan
+} else if (plan === "Premium") {
+    pricePerMonth = 20; // sets price for premium plan
+} else if (plan === "Enterprise") {
+    pricePerMonth = 50; // sets price for enterprise plan
+}
+let totalCost = pricePerMonth * months; // calculates total cost
+totalCost -= discount;
+return "Total Cost: $" + totalCost;
+}
+
+console.log(calculateSubscriptionCost("Basic", 6, 10)) // Expected output: "Total Cost: $50"
+console.log(calculateSubscriptionCost("Premium", 12, 0)); // Expected output: "Total Cost: $240"
