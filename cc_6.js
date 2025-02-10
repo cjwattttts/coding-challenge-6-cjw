@@ -49,3 +49,12 @@ return "Total Cost: $" + totalCost;
 
 console.log(calculateSubscriptionCost("Basic", 6, 10)) // Expected output: "Total Cost: $50"
 console.log(calculateSubscriptionCost("Premium", 12, 0)); // Expected output: "Total Cost: $240"
+
+//TASK 5 - Currency Conversion
+function convertCurrency(amount,exchangeRate) { // defines function for currency conversion
+    let convertedAmount = amount * exchangeRate;
+    return "Converted Amount: $" + convertedAmount.toFixed(2); // returns converted amount
+}
+
+console.log(convertCurrency(100, 1.1)); // Expected output: "Converted Amount: $110.00"
+console.log(convertCurrency(250, 0.85)); // Expected output: "Converted Amount: $212.50"
