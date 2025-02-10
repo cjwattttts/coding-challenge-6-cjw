@@ -69,11 +69,11 @@ applyBulkDiscount(orders, amount => amount > 500 ? amount * 0.9 : amount);
 // Expected output: [200, 540, 1080, 450, 720]
 
 //TASK 7 - Business Expense Tracker
-function createExpenseTracker() {
-    let totalExpenses = 0;
+function createExpenseTracker() { // defines function to create an expense tracker
+    let totalExpenses = 0; // initial total expense value
 
     return function(expense) {
-        totalExpenses += expense;
+        totalExpenses += expense; // adds expense to total
         return "Total Expenses: $" + totalExpenses;
     };
 }
