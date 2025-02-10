@@ -8,7 +8,7 @@ console.log(calculateProfit(20, 30, 100)); // Expected output: "Total Profit: $1
 console.log(calculateProfit(50, 70, 200)); // Expected output: "Total Profit: $4000"
 
 //TASK 2 - Calculate Sales Tax
-const calulcateSalesTax = function(amount,taxRate) { 
+const calculateSalesTax = function(amount,taxRate) { 
     let tax = amount * taxRate; // multiplies amount by tax rate
     return "Sales Tax: $" + tax; // returns tax calculation
 };
@@ -17,13 +17,13 @@ console.log(calculateSalesTax(100, 0.07)); // Expected output: "Sales Tax: $7"
 console.log(calculateSalesTax(500, 0.1)); // Expected output: "Sales Tax: $50"
 
 //TASK 3 - Calculate Employee Bonus
-const calculateBonus = (salary, perfomanceRating) => {
+const calculateBonus = (salary, performanceRating) => {
     let bonus; // declares bonus 
-    if (perfomanceRating === "Excellent") { // checks if perfomance is excellent
+    if (performanceRating === "Excellent") { // checks if perfomance is excellent
         bonus = salary * 0.2; // 20 percent bonus
-    } else if (perfomanceRating === "Good") { // checks if perfomance is good
+    } else if (performanceRating === "Good") { // checks if perfomance is good
         bonus = salary * 0.1; // 10 percent bonus
-    } else if (perfomanceRating === "Average") { // checks if perfomance is avergae
+    } else if (performanceRating === "Average") { // checks if perfomance is avergae
         bonus = salary * 0.05; // 5 percent bonus
     } 
     return "Bonus: $" + bonus; // returns the bonus
@@ -33,8 +33,8 @@ console.log(calculateBonus(5000, "Excellent"));
 console.log(calculateBonus(7000, "Good"));
 
 //TASK 4 - Subscprition Pricing
-function calculateSubscpritionCost(plan, months, discount = 0) { // defines the function
-let pricePerMonth; // declares price per month variable
+function calculateSubscriptionCost(plan, months, discount = 0) { // defines the function
+    let pricePerMonth; // declares price per month variable
 if (plan === "Basic") {
     pricePerMonth = 10; // sets price for basic plan
 } else if (plan === "Premium") {
@@ -87,7 +87,7 @@ function calculateYearsToPromotion(employeeLevel) { // define function to calcul
     if (employeeLevel >= 10) {
         return "Years to Reach Level 10: 0"; // return zero yearts if at level 10
     }
-    return calculateYearsToPromotion(employeeLevel + 1) + " + 2 years";
+    return 1 + calculateYearsToPromotion(employeeLevel + 1);
 }
 console.log(calculateYearsToPromotion(7)); // Expected output: "Years to Level 10: 6"
 console.log(calculateYearsToPromotion(5)); // Expected output: "Years to Level 10: 10"
